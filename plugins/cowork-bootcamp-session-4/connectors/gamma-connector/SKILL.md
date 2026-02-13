@@ -28,8 +28,8 @@ Gamma is a design tool that turns text into beautiful presentations, one-pagers,
 
 ## Skills That Use Gamma
 
-- Gamma Designer (creates presentations from structured content)
-- Project Kit (chains meeting transcripts → proposals → presentations)
+- **Project Kit** — chains meeting transcripts → proposals → client-ready slide decks
+- **Social Content** — generates carousel outlines that Gamma can design
 
 ## Troubleshooting
 

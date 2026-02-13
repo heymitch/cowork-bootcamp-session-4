@@ -1,84 +1,84 @@
 ---
 name: social-content
-description: Generate social media posts for X and LinkedIn in your voice. Say "Write me a LinkedIn post about [topic]" or "Turn this into an X thread".
+description: Generate social media posts for LinkedIn and X in your voice — thought leadership, threads, carousels. Say "Write a LinkedIn post about [topic]" or "Turn this into an X thread".
 ---
 
 # Social Content
 
-## What This Does
-
-Creates social media posts that sound like you. Give it a topic, a note, or just an idea — it writes platform-specific posts for X and LinkedIn in your voice.
+Give it a topic, idea, or raw note — it writes platform-specific posts that sound like you. LinkedIn thought leadership, X singles, threads, carousels, or a full week of content.
 
 ## How to Run
 
-- "Write me a LinkedIn post about [topic]"
+- "Write a LinkedIn post about [topic]"
 - "Turn this idea into an X thread: [idea]"
 - "Create a week of social posts from my recent notes"
 
 ---
 
-## Preflight Check (Run Every Time)
+## Preflight Check (Run Silently)
 
-Before writing anything, run through this silently. Only speak up if something is missing.
+### 1. Config check
+Read `config.md` from project root.
+- **Missing:** Stop. Say: "Say **'Run my business blueprint'** first — takes 5 minutes."
+- **Exists:** Continue.
 
-### 1. Does config.md exist?
-Read `config.md` from the project root.
-- **If missing:** Stop. Say: "I need to know about you and your business first. Say **'Run my business blueprint'** — it takes 5 minutes and makes everything I write sound like you, not generic AI."
-- **If exists:** Continue.
+### 2. Voice check
+Check config.md for `- [x] Voice Training completed`.
+- **Unchecked:** Stop. Say: "Say **'Train on my voice'** first so this sounds like you."
+- **Checked:** Load Voice Profile. Wrap all content generation with `<VOICE>{profile}</VOICE>`.
 
-### 2. Is Voice Training complete?
-Check config.md for `- [x] Voice Training completed` in the Setup Status section.
-- **If unchecked or missing:** Stop. Say: "I can write posts, but they won't sound like you yet. Say **'Train on my voice'** first — I only need to do it once. Then come back."
-- **If checked:** Load the Voice Samples / voice profile section from config.md.
+### 3. Notion check (silent)
+- **Notion tools found:** Save drafts to Notion content calendar. Update checkbox if unchecked.
+- **No Notion tools:** Save as local files. Don't mention Notion.
 
-### 3. Is Notion connected?
-Check your available tools for Notion tools.
-- **If found:** Use Notion for saving drafts. If config.md has `- [ ] Notion connected`, update it to `- [x] Notion connected`.
-- **If not found:** Save drafts as local files. Don't mention Notion.
-
-### 4. All clear — proceed silently.
+### 4. All clear — proceed without announcing.
 
 ---
 
-## What the Agent Does
+## The Process
 
-1. Takes your input — a topic, idea, note, or scans recent Notion notes if asked
-2. Picks the platform — X (280 chars for singles, 5-12 posts for threads) or LinkedIn (2,800 chars max)
-3. Applies your voice profile and human writing rules
-4. For LinkedIn: uses hook, body, CTA structure with thought leadership formatting
-5. For X: uses a scroll-stopping hook, punchy rhythm, no hashtags unless asked
-6. Shows you the draft for review
-7. On approval, saves to Notion content calendar (if connected) or a local file
+### Step 1: Get the Input
+Takes: a topic, idea, raw notes, or "scan my recent Notion notes" if connected.
+If the topic is vague, ask one clarifying question before writing.
 
-## Platform Rules
+### Step 2: Pick the Platform + Format
+If user didn't specify, match to content:
+- Deep insight or teaching → **LinkedIn post** (1,500-2,200 chars)
+- Punchy take → **X single** (≤280 chars)
+- Multi-point idea → **X thread** (5-12 posts) or **LinkedIn carousel**
+- "Give me a week" → **Weekly batch** (3-5 posts, mixed platforms)
+Confirm choice before writing. See `references/platform-rules.md`.
 
-### LinkedIn
+### Step 3: Pick the Format Style
+For LinkedIn, select from 5 proven styles in `references/linkedin-formats.md`:
+- Process/how-to → **Steps**
+- Data/results → **Stats**
+- Pitfalls/warnings → **Mistakes**
+- Reflections/experience → **Lessons**
+- Proof/case studies → **Examples**
+If unclear, present top 2 with sample hooks and let user choose.
 
-- Max 2,800 characters
-- Hook in first 2 lines (before the "see more" fold)
-- Use line breaks for readability
-- Thought leadership tone — teach, don't sell
-- End with a question or soft CTA
+### Step 4: Write the Draft
+Using voice profile + platform rules + format style:
+- Apply `<VOICE>{Voice Template}</VOICE>` wrapper
+- Hook in first 2 lines (before the fold)
+- One idea per post
+- End with engagement prompt or CTA
 
-### X (Twitter)
+### Step 5: Quality Check (Silent)
+Before showing: run the Surprise Test. Would this surprise someone who's read 10 posts on this topic? If not, sharpen the angle. Check for AI patterns — zero tolerance.
 
-- Single posts: 280 characters or less, punchy and complete
-- Threads: 5-12 connected posts, each stands alone but builds
-- First post is the hook — must stop the scroll
-- No hashtags unless you ask for them
-- Conversational, not polished
+### Step 6: Show Draft
+Present with platform, format style, and character count labeled.
+**Do not save yet.** Wait for approval or edits.
 
-## Content Formats Available
-
-- Single post (either platform)
-- Thread (X)
-- Carousel outline (LinkedIn — text for slides, not images)
-- Weekly batch (3-5 posts across platforms)
+### Step 7: Save
+On approval: save to Notion content calendar or local `content/YYYY-MM/DD-[slug].md`.
 
 ## Rules
 
-- Always use the voice profile
-- Apply human writing rules — no AI-tell patterns, vary sentence length, specific details over generic
-- Never post directly — draft only, you review and publish
-- If the topic is vague, ask one clarifying question before writing
-- No fabricated stats, fake testimonials, or hallucinated examples
+- Always use the voice profile. Generic = you skipped something.
+- Human writing rules: no AI patterns, vary sentence length, specific over vague.
+- Never post directly — draft only, user reviews and publishes.
+- No fabricated stats, fake testimonials, or hallucinated examples.
+- For weekly batches: 40% thought leadership, 35% tactical, 25% story.

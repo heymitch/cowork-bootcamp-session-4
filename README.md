@@ -7,6 +7,7 @@ One call becomes a proposal, deck, LinkedIn post, and follow-up email. Your agen
 | Component | Count |
 |-----------|-------|
 | Skills | 2 |
+| Commands | 1 |
 | Connectors | 1 |
 
 ## Install
@@ -20,14 +21,20 @@ One call becomes a proposal, deck, LinkedIn post, and follow-up email. Your agen
 
 | Skill | Say This | What Happens |
 |-------|----------|-------------|
-| **Project Kit** | "Build a project kit from my last call" | Drop a meeting transcript, brief, or voice memo — get a full project kit back: proposal/SOW with pricing, a presentation (real slides if Gamma connected, outline if not), social posts about the project, and a follow-up email ready to send. One input, four outputs. |
-| **Social Content** | "Write a LinkedIn post about X" | Give it a topic, idea, or raw note — it writes platform-specific posts for LinkedIn (2,800 chars, thought leadership) or X (280 chars punchy, or 5-12 post threads). Uses your voice profile so it sounds like you, not AI. |
+| **Project Kit** | "Build a project kit from my last call" | Drop a meeting transcript, brief, or voice memo — get 4 deliverables back: **Proposal/SOW** with scope, timeline, and pricing pulled from your config. **Presentation** (real Gamma slides if connected, clean outline if not). **Social post** about the project in your voice. **Follow-up email** with a specific opening line, not "great meeting today." One input, four polished outputs. |
+| **Social Content** | "Write a LinkedIn post about X" | Picks the right platform (LinkedIn, X single, thread, or carousel) and the right format style (Steps, Stats, Mistakes, Lessons, or Examples). Writes in your voice with a hook that stops the scroll. Includes a silent quality check — if it wouldn't surprise someone who's read 10 posts on the topic, it sharpens the angle before showing you. |
+
+## Commands
+
+| Command | Shortcut | What It Orchestrates |
+|---------|----------|---------------------|
+| **Project Kit** | `/project-kit` | Runs the full 7-step pipeline: get input → proposal → presentation → social post → follow-up email → review → save |
 
 ## Connectors
 
 | Connector | Say This | What It Adds |
 |-----------|----------|-------------|
-| **Gamma** | "Connect Gamma" | Your agent creates real presentations — not outlines, actual designed slides. Project Kit generates a client-ready deck from your meeting. Social Content can produce carousel outlines. Text in, polished visuals out. |
+| **Gamma** | "Connect Gamma" | Your agent creates real designed presentations — not outlines, actual slides with professional themes. Project Kit generates a client-ready deck from your meeting. Text in, polished visuals out. |
 
 ## Session Order
 
@@ -49,7 +56,7 @@ Session 4 of 6. Each session adds new skills to your agent:
 |---------|-------|--------|------------|
 | **1** | Setup & Organization | Business Blueprint, Organize Machine | — |
 | **2** | Content & Voice | Voice Training, Newsletter Writer, Voice Memo to Post | Notion |
-| **3** | Meeting Prep & Email | Meeting Prep | Gmail, Fireflies |
+| **3** | Meeting Prep & Email | Meeting Prep | Gmail, Fireflies, CRM |
 | **4** | Project Kit & Presentations | Project Kit, Social Content | Gamma |
 | **5** | Landing Pages | Vercel Landing Page, Frontend Design | — |
 | **6** | Skill Building | Skill Maker, Digital Product | — |
