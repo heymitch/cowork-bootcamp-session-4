@@ -1,62 +1,44 @@
-# Cowork Bootcamp — Session 4: Project Kit & Presentations
+# Project Kit
 
-One call becomes a proposal, deck, LinkedIn post, and follow-up email. Your agent handles the packaging so you handle the relationship.
-
-## Components
-
-| Component | Count |
-|-----------|-------|
-| Skills | 2 |
-| Commands | 1 |
-| Connectors | 1 |
+One meeting becomes everything you need to send — extract transcripts, build proposals, generate presentations, write follow-up emails, and create social content.
 
 ## Install
 
-```
-/plugin marketplace add heymitch/cowork-bootcamp-session-4
-/plugin install cowork-bootcamp-session-4@ship30-marketplace
-```
+Upload the ZIP via **Plugins > Upload Plugin** in Claude Cowork.
 
-## Skills
+## What You Get
+
+Install this plugin and 5 new capabilities appear in your `/` menu:
 
 | Skill | Say This | What Happens |
 |-------|----------|-------------|
-| **Project Kit** | "Build a project kit from my last call" | Drop a meeting transcript, brief, or voice memo — get 4 deliverables back: **Proposal/SOW** with scope, timeline, and pricing pulled from your config. **Presentation** (real Gamma slides if connected, clean outline if not). **Social post** about the project in your voice. **Follow-up email** with a specific opening line, not "great meeting today." One input, four polished outputs. |
-| **Social Content** | "Write a LinkedIn post about X" | Picks the right platform (LinkedIn, X single, thread, or carousel) and the right format style (Steps, Stats, Mistakes, Lessons, or Examples). Writes in your voice with a hook that stops the scroll. Includes a silent quality check — if it wouldn't surprise someone who's read 10 posts on the topic, it sharpens the angle before showing you. |
+| **Transcript Extractor** | "Pull my meeting transcript" | Finds your meeting transcript from Fireflies, Gmail, or accepts pasted notes. Extracts attendees, decisions, action items, and key quotes into a structured summary that feeds the other skills. |
+| **Proposal Builder** | "Write a proposal from my meeting" | Turns meeting content into a ready-to-send proposal or SOW — complete with scope, timeline, three-tier pricing, and payment terms. Uses your business details from config.md. |
+| **Deck Generator** | "Make a presentation for this project" | Creates a client-ready slide deck from your meeting content or proposal. Generates real designed slides via Gamma if connected, or a clean markdown outline for any slide tool. |
+| **Follow-Up Email** | "Write a follow-up email" | Drafts a post-meeting recap email with key discussion points, action items with owners, and a clear next step. Picks formal or casual tone based on the relationship. |
+| **Social Content** | "Make a LinkedIn post from my meeting" | Extracts the one valuable insight from your meeting and turns it into social content. Not "I had a great meeting" — the actual lesson or pattern worth sharing. |
 
-## Commands
+The **router** runs invisibly in the background — say "build a project kit" or "turn this meeting into everything" and it chains all five skills in sequence: transcript, proposal, deck, email, social posts.
 
-| Command | Shortcut | What It Orchestrates |
-|---------|----------|---------------------|
-| **Project Kit** | `/project-kit` | Runs the full 7-step pipeline: get input → proposal → presentation → social post → follow-up email → review → save |
+## Suggested Order (First Time)
 
-## Connectors
+1. **Transcript Extractor** — have a recent meeting? Say "pull my meeting transcript" and watch it find and structure the content *(2 min)*
+2. **Proposal Builder** — say "write a proposal from that meeting" and it builds a full SOW with pricing tiers *(3 min)*
+3. **Deck Generator** — say "make a presentation from that proposal" to get client-ready slides *(2 min)*
+4. **Follow-Up Email** — say "write a follow-up email" to draft the recap with all deliverables referenced *(1 min)*
+5. **Social Content** — say "make a post about this project" to extract one shareable insight *(1 min)*
 
-| Connector | Say This | What It Adds |
-|-----------|----------|-------------|
-| **Gamma** | "Connect Gamma" | Your agent creates real designed presentations — not outlines, actual slides with professional themes. Project Kit generates a client-ready deck from your meeting. Text in, polished visuals out. |
+## Reference Material
 
-## Session Order
+The plugin includes reference files that the skills consult automatically:
 
-Total time: ~25 minutes.
-
-1. **Gamma Connector** *(optional)* — connect Gamma so Project Kit generates real slides *(5 minutes)*
-2. **Project Kit** — turn a recent call into a full deliverable package *(10 minutes)*
-3. **Social Content** — create posts about your work to share publicly *(10 minutes)*
-
-Project Kit is the power move of this session. You finish a sales call, say "build a project kit," and walk away with everything you need to close. Social Content lets you turn that same conversation into public thought leadership.
-
-After this session, every meeting produces deliverables automatically. Session 5 adds landing pages.
+- **Proposal Template** — Full SOW structure with one-pager and multi-phase formats, including scope, timeline, pricing tiers, and terms sections
+- **Email Templates** — Follow-up email formats for new clients, existing clients, partners, post-presentation, and warm re-engagement
+- **Deliverable Checklist** — Quality gates to run before sending any deliverable (names, placeholders, tone, CTA)
+- **Presentation Structure** — Default 5-7 slide deck format with Gamma integration guide and meeting-type adaptations (sales, strategy, kickoff)
+- **Platform Rules** — Format constraints for LinkedIn, X/Twitter, and carousels with quality gates for all platforms
+- **LinkedIn Formats** — 5 proven post styles (Steps, Stats, Mistakes, Lessons, Examples) with structure and selection logic
 
 ## Part of Cowork Bootcamp
 
-Session 4 of 6. Each session adds new skills to your agent:
-
-| Session | Focus | Skills | Connectors |
-|---------|-------|--------|------------|
-| **1** | Setup & Organization | Business Blueprint, Organize Machine | — |
-| **2** | Content & Voice | Voice Training, Newsletter Writer, Voice Memo to Post | Notion |
-| **3** | Meeting Prep & Email | Meeting Prep | Gmail, Fireflies, CRM |
-| **4** | Project Kit & Presentations | Project Kit, Social Content | Gamma |
-| **5** | Landing Pages | Vercel Landing Page, Frontend Design | — |
-| **6** | Skill Building | Skill Maker, Digital Product | — |
+This is the Session 4 plugin. Each session adds new skills to your agent.

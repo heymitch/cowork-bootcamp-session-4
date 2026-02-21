@@ -1,0 +1,8 @@
+{
+  "name": "project-kit",
+  "version": "2.0.0",
+  "description": "One meeting becomes everything you need to send — extract transcripts, build proposals, generate presentations, write follow-up emails, and create social content.",
+  "author": { "name": "Speakeasy" },
+  "license": "UNLICENSED",
+  "keywords": ["cowork", "bootcamp", "session-4"]
+}
